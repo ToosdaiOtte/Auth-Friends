@@ -4,6 +4,7 @@ import './App.css';
 
 import Login from './components/Login';
 import Friends from './components/Friends';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           </li>
         </ul>
         <Switch>
-          <Route exact path='/protected' component={Friends} />
+          <PrivateRoute exact path='/protected' component={Friends} />
           <Route path='/login' component={Login} />
           <Route component={Login} />
         </Switch>
